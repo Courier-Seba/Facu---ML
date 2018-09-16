@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+	<head>
+		<title>Contacto</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="Inteligencia artificial en el mundo" />
+		<meta name="author" content="Sebastian Valdivia">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- JavaScript-->
+		<script src="js/control.js" languaje="javascript" type="text/javascript"></script>
+		<noscript>
+			El uso de javascript esta desabilitado en este navegador, para usar el formulario se necesita 
+			que permita el uso de javascript.
+		</noscript>
+
+		<!--Carga css-->
+		<link rel="stylesheet" type="text/css" href="css/master.css">
+	</head>
+
+	<body>
+		<div id="header">
+			<h1>Contacto</h1>
+			<ul class="derecho">
+				<li><a href="index.html"><img src="Imagenes/home.ico" alt="home"/> </a></li>
+				<li><a href="form.html"><img src="Imagenes/conta.ico" alt="Contacto"/> </a></li>
+				<li><a href="yo.html"><img src="Imagenes/me.ico" alt="Sobre mi"/> </a></li>
+			</ul>
+		</div>	
+
+	<!--Barra navegación-->
+		<div id="aside">
+			<ul>
+				<a href="simbolica.html"><li>Aprendizaje simbólico</li></a>
+				<a href="automatico.html"><li>Aprendizaje automático</li></a>
+				<a href="profundo.html"><li>Aprendizaje profundo</li></a>
+				<a href="estadistico.html"><li>Aprendizaje estadístico</li></a>
+				<a href="neural.html"><li>NN</li></a>
+				<a href="vision.html"><li>Visión de computadora</li></a>
+				<a href="robotica.html"><li>Robótica</li></a>
+				<a href="reconocimiento.html"><li>Reconocimiento de voz</li></a>
+				<a href="nlp.html"><li>NLP</li></a>
+				<a href="herramientas.html"><li>Herramientas</li></a>
+			</ul>
+		</div>
+
+<!--Contenido de la pagina-->
+		<div id="section">
+			<h2>Contacto con el desarrollador</h2>
+			<p>
+				Si tenés alguna duda, te parece que habría que agregar algo o querés contactarte, completá 
+				los datos y dejá tu comentario.
+			</p>
+			<form onsubmit="validate()" target="_blank">
+				<label for="nombre">Nombre: </label>
+				<input type="text" ape="nom" id="nombre" value="Su nombre" onfocus="this.value = ''">
+				<label for="apellido">Apellido: </label>
+				<input type="text" name="ape" id="apellido" value="Su apellido" onfocus="this.value = ''">
+				<br><br>
+				<label for="mail">Su mail: </label>
+				<input type="mail" id="mail" value="Un mail de referencia" onfocus="this.value = ''"> 
+				<br><br>
+				<fieldset id="tipo">
+					<input type="radio" name="tipo">Pregunta
+					<input type="radio" name="tipo">Contacto
+					<input type="radio" name="tipo">Sugerencia
+				</fieldset>
+				<br><br>
+				<p>Mensage: </p>
+				<textarea name="msg" id="mensage" cols="30" rows="10">
+					Ingrese...
+				</textarea>
+				<br><br>
+				<fieldset>
+					<input type="submit" value="Enviar">
+					<input type="reset" value="Cancelar">
+				</fieldset>
+			</form>
+		</div>
+	</body>
+
+</html>

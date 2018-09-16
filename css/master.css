@@ -1,0 +1,124 @@
+body{
+	font-family: arial;
+	background: url("../Imagenes/bg.jpg");
+	background-size: 100%;
+}
+
+	/*Titulo*/
+#header{
+	position: fixed;
+	width: 100%;
+	height: 10%;
+	top: 0;
+	text-align: center;
+	background-color: #3F3F3F;
+}
+#header h1{
+	position: fixed; 
+	color: #1652cc;
+	left: 0; 
+	right: 0; 
+}
+#header ul{
+	margin-right: 2%;
+}
+#header li{
+	margin: 5px;
+}
+#header li:hover{
+	background-color: #707070;
+}
+#header a{
+	position: relative;
+	z-index: 9999;
+}
+#header ul li{
+	float: right;
+	display: inline;
+	padding: 0;
+}
+
+/* Barra lateral*/
+#aside{
+	position: fixed;
+	height: 100%;
+	overflow-y: auto;
+	top: 10%;
+	padding: 0;
+	width: 15%;
+	background-color: #1D1B1E;
+	border-right: 2px outset;
+}
+#aside ul{
+	padding: 0;
+}
+#aside li{
+	padding: 5%;
+	margin: 2%;
+	border: solid black;
+	background-color: blue;
+	list-style: none;
+	overflow: visible;
+}
+#aside a:link, a:visited{
+	text-decoration: none;
+	color: black;
+}
+#aside a:hover{
+	text-decoration: underline;
+}
+#aside li:hover{
+	background-color: darkblue
+}
+
+/*Contenido principal*/
+#section{
+	padding-top: 5%;
+	font-family: arial;
+	max-width: 55%;
+	margin: auto;
+	text-align: left;
+	background-color: #cfdef7;
+	color: #001540;
+}
+#section img{
+	margin: 0;
+	width: 100%;
+	text-align: center;
+}
+#section h3{
+	text-decoration: underline;
+}
+#section p{
+	text-indent: 1em;
+}
+#section .tabla{
+	width: 100%;
+	border: solid 3px darkblue;
+}
+#section .tabla th{
+	border: 5px solid darkblue;
+}
+#section .tabla td{
+	border: 1px solid black;
+}
+#section .subparte{
+	border: groove 10px red;
+	text-align: center;
+	background: lightgreen
+}
+#section .importante{
+	text-align: center;
+	font-style: bold;
+	color: black;
+	font-size: x-large;
+}
+fieldset{
+	border: none;
+}
+
+
+/*Uso general*/
+.centrado{
+	text-align: center;
+}

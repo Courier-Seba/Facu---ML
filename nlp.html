@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+	<head>
+		<title>NLP</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="Inteligencia artificial en el mundo" />
+		<meta name="author" content="Sebastián Valdivia">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--Carga css-->
+		<link rel="stylesheet" type="text/css" href="css/master.css">
+	</head>
+
+	<body>
+		<div id="header">
+			<h1>Procesamiento de lenguaje natural</h1>
+			<ul class="derecho">
+				<li><a href="index.html"><img src="Imagenes/home.ico" alt="home"/> </a></li>
+				<li><a href="form.html"><img src="Imagenes/conta.ico" alt="Contacto"/> </a></li>
+				<li><a href="yo.html"><img src="Imagenes/me.ico" alt="Sobre mi"/> </a></li>
+			</ul>
+		</div>
+
+	<!--Barra navegación-->
+		<div id="aside">
+			<ul>
+				<a href="simbolica.html"><li>Aprendizaje simbólico</li></a>
+				<a href="automatico.html"><li>Aprendizaje automático</li></a>
+				<a href="profundo.html"><li>Aprendizaje profundo</li></a>
+				<a href="estadistico.html"><li>Aprendizaje estadístico</li></a>
+				<a href="neural.html"><li>NN</li></a>
+				<a href="vision.html"><li>Visión de computadora</li></a>
+				<a href="robotica.html"><li>Robótica</li></a>
+				<a href="reconocimiento.html"><li>Reconocimiento de voz</li></a>
+				<a href="nlp.html"><li>NLP</li></a>
+				<a href="herramientas.html"><li>Herramientas</li></a>
+			</ul>
+		</div>
+
+<!--Contenido de la pagina-->
+		<div id="section">
+			<h2>¿Qué es?</h2>
+			<p>
+				El Procesamiento de lenguaje natural (NLP de natural lenguaje processing) se refiere al método de 
+				entender y comunicarse por lenguajes humanos como español e ingles.
+			</p>
+			<p>
+				Es requerido cuando se busca que un IA realiza una acción por a través de comandos obtenidos del 
+				entendimiento de un diálogo.
+				Este campo envuelve varias actividades del ámbito humano y ayudan al uso para usuarios poco 
+				experimentados. Las entradas y salidas pueden ser por sonido (voz artificial) o escritas en pantalla.
+			</p>
+			<h3>Componentes</h3>
+			<p>Hay 2 componentes principales:</p>
+			<h4>Entendimiento de lenguaje natural (NLU)</h4>
+			<p>Realiza las tareas de:</p>
+			<ul>
+				<li>Divide la entrada de dato en lenguaje natural en representación que se pueda entender.</li>
+				<li>Analiza los diferentes aspectos del lenguaje.</li>
+			</ul>
+			<h4>Generación de lenguaje natural(NLG)</h4>
+			<p>Es la producción de frases y sentencias con sentido. Envuelve:</p>
+			<ol>
+				<li>Planear el texto: toma el contenido relevante de una base de datos.</li>
+				<li>Planear la sentencia: Elegir las palabras, formar la frases, tonalidad.</li>
+				<li>Realización: Finalmente se forma el resultado mezclando los 2 pasos anteriores.</li>
+			</ol>
+			<h4>Dificultades del NLU</h4>
+			<p>
+				Debido a que el lenguaje es muy variado y ambiguo existen muchas variaciones y genera
+				miles de formas y estructuras.  Algunos problemas que suele traer el área son:
+			</p>
+			<ul>
+				<li>
+					Diferentes léxicos: En el mundo existen muchos léxicos para cada idioma y el 
+					entrenamiento suele dificultarse al mezclarse.
+				</li>
+				<li>
+					Sintaxis: Hay mas de 1 forma de formar una frase dándole mas de 1 significado.
+				</li>
+				<li>
+					Diferentes referencias: Una frase puede tener varios significados o distintos para uno solo.
+				</li>
+			</ul>
+			<h4>Pasos a seguir en NLP</h4>
+			<ol>
+				<li>
+					<b>Análisis léxico:</b> Analiza la estructura de las palabras, textos y sus párrafos.
+				</li>
+				<li>
+					<b>Análisis de sintaxis:</b> Analiza la gramática y la ortografía, acomoda la palabras para formar
+					relaciones.
+				</li>
+				<li>
+					<b>Análisis semántico:</b>Analiza el significado desde un diccionario (entendible por el sistema). 
+					Se divide la oración en partes y se analizan en su dominio (verbo, sustantivo, etc.)
+				</li>
+				<li>
+					<b>Integración del discurso:</b> El significado de cualquier oración depende de la interpretación de
+					la oración anterior. Sigue ordenándose hasta formar el texto final.
+				</li>
+				<li>
+					<b>Análisis pragmático:</b> Implica derivar aquellos aspectos del lenguaje que requieren 
+					conocimiento del mundo real.
+				</li>
+			</ol>
+			<h3>Aspectos del análisis sintáxtico</h3>
+			<p>Los algoritmos más utilizados para NLP son:</p>
+			<h4>Gramática sin contexto</h4>
+			<p>
+				Es la gramática que consiste en reglas con un solo símbolo en el lado "cotidiano" o vulgar de las 
+				reglas de escritura.
+			</p>
+			<p>
+				El árbol de análisis: interpreta la oración en partes estructuradas para que la computadora pueda 
+				entenderla y procesarla fácilmente. Para que el algoritmo construya este árbol de análisis sintáctico,
+				se debe construir un conjunto de reglas de reescritura, que describan qué estructuras de árbol son 
+				legales.
+			</p>
+			<h5>Contras</h5>
+			<ul>
+				<li>No son muy precisas</li>
+				<li>Para dar mas precisión se deben cargar varios sets de gramática,  </li>
+			</ul>
+			<h3>Análisis de arriba-abajo</h3>
+			<p>
+				Este es mucho mas simple busca cada significado por palabra buscando por cada carácter de cada letra.
+				Es muy fácil de implementar.
+			</p>
+			<h5>Contras</h5>
+			<ul>
+				<li>Es muy ineficiente, la búsqueda se repite si hay algún error</li>
+				<li>Muy lento</li>
+			</ul>
+		</div>
+	</body>
+
+</html>

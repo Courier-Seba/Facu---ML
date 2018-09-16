@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+	<head>
+		<title>Automático</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="Inteligencia artificial en el mundo" />
+		<meta name="author" content="Sebastián Valdivia">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--Carga css-->
+		<link rel="stylesheet" type="text/css" href="css/master.css">
+	</head>
+
+	<body>
+		<div id="header">
+			<h1>Aprendizaje automático</h1>
+			<ul class="derecho">
+				<li><a href="index.html"><img src="Imagenes/home.ico" alt="home"/> </a></li>
+				<li><a href="form.html"><img src="Imagenes/conta.ico" alt="Contacto"/> </a></li>
+				<li><a href="yo.html"><img src="Imagenes/me.ico" alt="Sobre mi"/> </a></li>
+			</ul>
+		</div>
+
+	<!--Barra navegación-->
+		<div id="aside">
+			<ul>
+				<a href="simbolica.html"><li>Aprendizaje simbólico</li></a>
+				<a href="automatico.html"><li>Aprendizaje automático</li></a>
+				<a href="profundo.html"><li>Aprendizaje profundo</li></a>
+				<a href="estadistico.html"><li>Aprendizaje estadístico</li></a>
+				<a href="neural.html"><li>NN</li></a>
+				<a href="vision.html"><li>Visión de computadora</li></a>
+				<a href="robotica.html"><li>Robótica</li></a>
+				<a href="reconocimiento.html"><li>Reconocimiento de voz</li></a>
+				<a href="nlp.html"><li>NLP</li></a>
+				<a href="herramientas.html"><li>Herramientas</li></a>
+			</ul>
+		</div>
+
+<!--Contenido de la pagina-->
+		<div id="section">
+			<h2>¿Qué es?</h2>
+			<p>
+				Es la aplicación de la ciencia de algoritmos para darle sentido a la
+				información, especialmente en la era donde ésta viene en cantidades abundantes
+				y con las nuevas tecnologías se puede convertir toda esa información en
+				conocimiento.
+			</p>
+			<h3>Creando conocimiento</h3>
+			<p>
+				La IA evolucionó a un nuevo nivel de aprendizaje automático a partir de
+				algoritmos que reconocen la información y hacen predicciones de la misma,
+				gradualmente mejora su rendimiento y actualiza sus "conocimiento" (más adelante
+				se entenderá como los modelos de información)
+			</p>
+			<h3>Tipos de aprendizajes</h3>
+			<h5>Se diferencias 3 tipos:</h5>
+			<ul>
+				<li>
+					<b>Aprendizaje supervisado:</b>Predicciones a partir de modelos de
+					información para generar predicciones a partir de modelos similares.
+					<i>Ya se conoce la respuesta correcta</i>
+					<img src="Imagenes/supervisado.png" alt="supervisado">
+				</li>
+				<li>
+					<b>Aprendizaje no supervisado:</b>Explora la información, para encontrarle
+					un sentido.
+					<i>No se conoce el tipo o la estructura de la información dada.</i>
+					<img src="Imagenes/reforzado.png" alt="reforzado">
+				</li>
+				<li>
+					<b>Aprendizaje reforzado:</b> Se forma un sistema basado en darle una
+					recompensa al obtener un estado, a partir de la interacción con el ambiente.
+					<i>Se definen recompensas a través de las acciones que toma dependiendo el
+					ambiente.</i>
+				</li>
+			</ul>
+			<h3>Procesado de información</h3>
+			<p>
+				Los datos que se toman, normalmente, es de baja calidad y no puede ser usada
+				para entrenar. Antes de su uso se necesita procesar para que tenga salidas 
+				mas limpias. La información extraida del mundo real normalmente esta llena 
+				de errores y valores sin sentido. Por esto es importante "limpiarla". Hay 
+				2 formas de hacerlo.
+			</p>
+			<ul>
+				<li>Limpieza de datos</li>
+				<li>Reducción de datos</li>
+			</ul>
+			<h4>Limpieza de datos</h4>
+			<ol>
+				<li>
+					Completar los datos que faltan
+					<ul>
+						<li>Ignoran tuplas</li>
+						<li>Usar el significado para completar</li>
+						<li>Predecir el valor perdido</li>
+					</ul>
+				</li>
+				<li>
+					Suavizar los errores de los datos <br>
+					Hay varias formas de hacerse:
+					<ul>
+						<li>Particionar en iguales. Tuplas del mismo rango.</li>
+						<li>Suavizando en iguales. Por ejemplo: (8, 8, 8)</li>
+						<li>Suavizando por uniones. Por ejemplo: (3, 3, 15)</li>
+					</ul>
+				</li>
+				<li>
+					Por último remueve las partes aisladas. Puede ser por métodos:
+					<ol>
+						<li>Clustering</li>
+						<li>Ajuste a la curva</li>
+						<li>Test de hipótesis con un modelo</li>
+					</ol>
+				</li>
+			</ol>
+			<h4>Reducción de datos</h4>
+			<ol>
+				<li>
+					Reducción de cantidad de atributos:
+					<ul>
+						<li>Agregado de dato: aplicando roll-up, slice o dice</li>
+						<li>Removiendo atributos irrelevantes</li>
+					</ul>
+				</li>
+				<li>
+					Reducción de los valores de atributos:
+					<ul>
+						<li>Clustering: Agrupa valores</li>
+						<li>Agregado o generalizando</li>
+					</ul>
+				</li>
+				<li>
+					Reducción de números de tuplas por sampling
+				</li>
+			</ol>
+			<h3>Algunos métodos de aprendizaje</h3>
+			<ul>
+				<li>Regresión lineal</li>
+				<li>Arboles de decisión</li>
+				<li>Clasificador bayesiano ingenuo</li>
+				<li>KNN </li>
+				<li>Soporte vectorial</li>
+			</ul>
+			<p class="subparte">
+				<a href="metoaprend.html">Si querés saber como funcionan hace click aca</a>
+			</p>
+		</div>
+	</body>
+
+</html>

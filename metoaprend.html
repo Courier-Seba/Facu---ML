@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+	<head>
+		<title>Métodos de Aprendizaje</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="Inteligencia artificial en el mundo" />
+		<meta name="author" content="Sebastián Valdivia">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!--Carga css-->
+		<link rel="stylesheet" type="text/css" href="css/master.css">
+	</head>
+
+	<body>
+		<div id="header">
+			<h1>Funcionamiento de los métodos de aprendizaje</h1>
+			<ul class="derecho">
+				<li><a href="index.html"><img src="Imagenes/home.ico" alt="home"/> </a></li>
+				<li><a href="form.html"><img src="Imagenes/conta.ico" alt="Contacto"/> </a></li>
+				<li><a href="yo.html"><img src="Imagenes/me.ico" alt="Sobre mi"/> </a></li>
+			</ul>
+		</div>
+
+	<!--Barra navegación-->
+		<div id="aside">
+			<ul>
+				<a href="simbolica.html"><li>Aprendizaje simbólico</li></a>
+				<a href="automatico.html"><li>Aprendizaje automático</li></a>
+				<a href="profundo.html"><li>Aprendizaje profundo</li></a>
+				<a href="estadistico.html"><li>Aprendizaje estadístico</li></a>
+				<a href="neural.html"><li>NN</li></a>
+				<a href="vision.html"><li>Visión de computadora</li></a>
+				<a href="robotica.html"><li>Robótica</li></a>
+				<a href="reconocimiento.html"><li>Reconocimiento de voz</li></a>
+				<a href="nlp.html"><li>NLP</li></a>
+				<a href="herramientas.html"><li>Herramientas</li></a>
+			</ul>
+		</div>
+
+<!--Contenido de la pagina-->
+		<div id="section">
+			<h2>Como funcionan los diversos métodos de aprendizaje supervisado</h2>
+			<p>
+			Se requiere algo de conocimiento en Matemática para entender su funcionamiento, pero no es necesario ser 
+			expertos en la materia para su uso ya que existen herramientas ya creadas para su directa aplicación.
+			</p>
+			<h4>Regresión lineal</h4>
+			<img src="Imagenes/relineal.png" alt="regresión lineal">
+			<p>
+			Es un método de aprendizaje supervisado usado para predecir problemas.
+			en él se predice el objetivo a través de encontrar el mejor punto entre las 
+			variables buscando el menor error posible. Hay diversos métodos:
+			</p>
+			<ul>
+				<li>
+					Método del ultimo cuadrado: el mejor resultado es calculado asegurando
+					que la suma de las distancias entre los puntos y la línea sea el menor
+					posible.
+					<ol>
+						<li>
+							Calcular x e y
+						</li>
+						<li>
+							Calcular la pendiente: <img src="Imagenes/pendiente.png" alt="pendiente">
+						</li>
+						<li>
+							Calcular el corte en y
+						</li>
+					</ol>
+				</li>
+			</ul>
+			<h4>Pro y contras de regresión lineal</h4>
+			<p>Pro</p>
+			<ol>
+				<li>Simple de implementar</li>
+				<li>Usado para predicción numérica</li>
+			</ol>
+			<p>Contras</p>
+			<ol>
+				<li>Propenso a sobre-ajustarse</li>
+				<li>No se puede usar para establecer la relación entre variables no lineales</li>
+			</ol>
+
+			<hr>
+
+			<h2>Árboles de decisión</h2>
+			<p>
+				Son un método para clasificación y regresión simples tomas de decisiones para filtrar un dato. El 
+				fin es crear un modelo que predice el valor de la variable objetivo a partir de aprender de simples 
+				reglas inferidas desde la información.
+			</p>
+			<img src="Imagenes/arbol.png" alt="Arbol ejemplo">
+			<h4>Como construir y analizar un árbol de decisión</h4>
+			<p>Para empezar tendremos en cuenta 3 formulas</p>
+			<ol>
+				<li>
+					Ganancia de información:
+					<img src="Imagenes/ganancia.png" alt="Formula ganancia">
+				</li>
+				<li>
+					Entropía:
+					<img src="Imagenes/entropia.png" alt="Formula entropia">
+				</li>
+				<li>
+					Ganancia final:
+					<img src="Imagenes/final.png" alt="Formula total">
+				</li>
+			</ol>
+			<h4>Considerando unos juguetes de goma con sus atributos y valores</h4>
+			<table>
+				<tr>
+					<th>Tamaño</th>
+					<th>Forma</th>
+					<th>Color</th>
+					<th>Elección</th>
+				</tr>
+				<tr>
+					<td>M</td>
+					<td>Prisma</td>
+					<td>Azul</td>
+					<td>SI</td>
+				</tr>
+				<tr>
+					<td>S</td>
+					<td>Cono</td>
+					<td>Rojo</td>
+					<td>NO</td>
+				</tr>
+				<tr>
+					<td>L</td>
+					<td>Cono</td>
+					<td>Rojo</td>
+					<td>NO</td>
+				</tr>
+				<tr>
+					<td>S</td>
+					<td>Esfera</td>
+					<td>Rojo</td>
+					<td>SI</td>
+				</tr>
+				<tr>
+					<td>L</td>
+					<td>Cubo</td>
+					<td>Verde</td>
+					<td>SI</td>
+				</tr>
+				<tr>
+					<td>L</td>
+					<td>Cubo</td>
+					<td>Rojo</td>
+					<td>NO</td>
+				</tr>
+				<tr>
+					<td>L</td>
+					<td>Esfera</td>
+					<td>Verde</td>
+					<td>SI</td>
+				</tr>
+			</table>
+			<ul>
+				<li>Clase SI (p)=4</li>
+				<li>Clase NO (n)=3</li>
+			</ul>
+			<p>Aplicamos la primera formula: (p,n)=l(4,3) = 0.985</p>
+			<p>La segunda: E(tam)=(2/7*1)+(1/7*0)+(4/7*1) = 0.857</p>
+			<p>Y por ultimo: Gain(tam)=l(p,n)-E(A) = 0.985 - 0.857</p>
+			<p>En este caso el juguete con mayor ganancia(en este caso es la forma) se convierte en la raíz</p>
+			<img src="Imagenes/juguetefinal.png" alt="Arbor resultado">
+			<h4>Pro y contras de los árboles de decisión</h4>
+			<p>Pro</p>
+			<ol>
+				<li>Simple de entender y fácil de implementar</li>
+				<li>Requiere poco procesamiento de datos</li>
+			</ol>
+			<p>Contras</p>
+			<ol>
+				<li>Se sobre-satura</li>
+				<li>Pueden ser inestables y muy erróneas</li>
+			</ol>
+
+			<hr>
+
+			<h2>Clasificador bayesiano ingenuo</h2>
+			<p>
+				Este método es un algoritmo para clasificar datos en clases pre-definidas. Usa el concepto de 
+				probabilidad condicional(de forma simple: algo pasa porque algo ya paso) para clasificar la 
+				información dada. Este clasificador encuentra la probabilidad de cada característica y selecciona
+				el resultado con mayor chance.
+			</p>
+			<h4>Un ejemplo</h4>
+			<p>
+				2 eventos llamados A y B: P(A y B) = P(A) * P(B | A)
+			</p>
+			<p>
+				<b>Rebla de bayes: </b>La regla es como A pasa si B ya paso P(A|B), cuando nosotros sabemos
+				que B pasa porque A paso P(B|A): P(A|B)= ( P(B|A) * P(A) / P(B) )
+			</p>
+			<h4>Pro y contras de clasificador Bayesiano ingenuo</h4>
+			<p>Pro</p>
+			<ol>
+				<li>Requiere poca cantidad de información de entrenamiento</li>
+				<li>Fácil y rápido de predecir la clase de información</li>
+			</ol>
+			<p>Contras</p>
+			<ol>
+				<li>No funciona si las características están relacionadas</li>
+				<li>No sirve grandes niveles de información (extremadamente lento)</li>
+			</ol>
+
+			<hr>
+
+			<h2>KNN</h2>
+			<img src="Imagenes/knn.png" alt="KNN">
+			<p>
+				Es el más simple algoritmo que es usado para clasificación. Cuando el modelo es cargado con 
+				otro de ejemplo encuentra la distancia al punto con cada punto seguido. Entonces encuentra los 
+				miembros <b>k</b>  más cercanos. Ayuda a clasificar los datos en un grupo. El valor de k nos da 
+				la cantidad de miembros vecinos para considerar.
+			</p>
+			<h4>Calculando la distancia</h4>
+			<p>Para encontrar la distancia entre 2 puntos (P1, P2) usamos la simple regla:</p>
+			<img src="Imagenes/distancia.png" alt="Distancia">
+			<h4>Veamos con un ejemplo</h4>
+			<table>
+				<tr>
+					<th><b>Numero</b></th>
+					<th>Durabilidad</th>
+					<th>Fuerza</th>
+					<th>Resultado</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>7</td>
+					<td>7</td>
+					<td>MALO</td>
+				</tr>
+					<tr>
+					<td>2</td>
+					<td>7</td>
+					<td>4</td>
+					<td>MALO</td>
+				</tr>
+					<tr>
+					<td>3</td>
+					<td>3</td>
+					<td>4</td>
+					<td>BUENO</td>
+				</tr><tr>
+					<td>4</td>
+					<td>1</td>
+					<td>4</td>
+					<td>BUENO</td>
+				</tr>
+			</table>
+			<p>
+				Ese es la información modelo. Ahora considerando el caso: Durabilidad=3, Fuerza=7 y el resultado 
+				se desconoce; aplicamos la fórmula de distancia a cada uno de los calores en el modelo y el
+				resultado da que la mas cercana es el numero 3 con 3 puntos de distancia y como ese es BUENO, 
+				clasificamos el caso dado como BUENO.
+			</p>
+			<h4>Pero como se elige el valor de k?</h4>
+			<p>
+				Elegirlo correctamente mejorara la precisión. Si lo elegimos lo mas alto posible reduce la variación 
+				y es mas rápido pero los mas bajos no se van a considerar
+			</p>
+			<h4>Pro y contras de KNN</h4>
+			<p>Pro
+			</p>
+			<ol>
+				<li>Fácil de implementar</li>
+				<li>No hace suposiciones previas de los datos </li>
+			</ol>
+			<p>Contras</p>
+			<ol>
+				<li>Es extremadamente lento. El tiempo depende de calcular la distancia con cada punto.</li>
+			</ol>
+
+			<hr>
+
+			<h2>Soporte vectorial o SVM</h2>
+			<p>
+				Es otro algoritmo usado para clasificación y regresión. El objetivo de SVM es encontrar el
+				hiperplano que divide 2 clases de datos.
+			</p>
+			<img src="Imagenes/hiperplano.png" alt="Hiperplano">
+			<p>
+				Este divide 2 clases. El hiperplano con la distancia máxima posible es el óptimo. Los vectores son
+				coordenadas pertenecientes a los datos mas cercanos al hiperplano (como si se apoyara sobre ellos)
+			</p>
+			<h4>¿Y si no se puede separarlas por línea?</h4>
+			<p>
+				En ese caso usa el parámetro kernel. La idea es que si el dato es visto	desde una dimensión mas
+				alta se puede separar fácilmente en 2d.
+			</p>
+			<img src="Imagenes/variasdim.png" alt="Otras dimenciones">
+			<p>
+				La coordenada en z del punto en la dimensión mas alta se calcula como la suma de los cuadrados 
+				de x e y. Es decir: z = x^2 + y^2
+			</p>
+			<h4>Los tipos de kernel son:</h4>
+			<ol>
+				<li>Lineal</li>
+				<li>Polinomial</li>
+				<li>Función radial Base</li>
+				<li>Sigmoide</li>
+			</ol>
+			<h4>Pro y contras</h4>
+			<p>Pro</p>
+			<ol>
+				<li>Es efectivo en espacios de grandes dimensiones</li>
+				<li>Funciona bastante bien con claro margen de separación</li>
+				<li>Es efectivo en casos donde el número de dimensiones es mayor al número de opciones</li>
+			</ol>
+			<p>Contras</p>
+			<ol>
+				<li>No funciona bien con grandes cantidades de datos</li>
+				<li>Baja performance si los datos contienen errores</li>
+			</ol>
+		</div>
+	</body>
+
+</html>
