@@ -14,7 +14,7 @@ function validate() {
 		mailInput = document.getElementById("mail").value;
 
 	if ((nombreInput == "") || (apellidoInput == "") || (mailInput == "")) {
-		prompt("Ingrese sus datos");
+		alert("Ingrese sus datos");
 		return false;
 	};
 
