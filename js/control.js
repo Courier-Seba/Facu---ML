@@ -1,22 +1,25 @@
 //Programa para controlar el formulario
-// v  0.1
-
-//Declaraciones
 
 
-function clearText() {
-	var nombres = document.getElementById("nombre");
-	nombres.value = "";
 
+
+function nombreCompleto(nombre, apellido) {
+	return (nombre + " " + apellido);
 };
 
 function validate() {
 	var 
-		nombreInput = document.getElementById("nombre"),
-		apellidoInput = document.getElementById("apellidos"),
-		mailInput = document.getElementById("mail");
-	alert(nombreInput.value);
+		nombreInput = document.getElementById("nombre").value,
+		apellidoInput = document.getElementById("apellido").value,
+		mailInput = document.getElementById("mail").value;
+
+	if ((nombreInput == "") || (apellidoInput == "") || (mailInput == "")) {
+		prompt("Ingrese sus datos");
+		return false;
+	};
+
+	var persona = nombreCompleto(nombreInput, apellidoInput);
+
+	alert("Gracias " + persona);
 	return true;
-};
-
-
+}
