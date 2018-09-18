@@ -8,14 +8,28 @@ function alertaChistoso() {
 	return alert("Completa bien tus datos")
 };
 
-// Checkea el ingreso de datos correctamente
-function compruebaDatos(strNombre, strApellido, strMail) {
-
+function seudonimoNormal(letrasPalabra) {
 	// Chars no aceptados (puden ser más)
 	var charNoAceptado = new Array ("0", "1", "2", "3", "4", "5", "6", "7", "8",
 									"9", "|", "|", "!", "#", "$", "%", "&", "/",
 									"(", ")", "=", "?", "+", "-", "_", ",", ";",
 									":", ".", "*", "@", "{", "}", "[", "]");
+
+	for (i = 0; i < letrasPalabra.length; i++) { 
+		for (j = 0; j < charNoAceptado.length; j++) {
+			if (letrasPalabra[i] == charNoAceptado[j]) {
+				return false;
+			};
+		};
+	};
+	//Todo bien
+	return true;
+};
+
+
+// Checkea el ingreso de datos correctamente
+function compruebaDatos(strNombre, strApellido, strMail) {
+
 	// Separa los String a una lista de chars
 	var listaLetras = function(someStr) {return someStr.split("")};
 
@@ -24,26 +38,27 @@ function compruebaDatos(strNombre, strApellido, strMail) {
 		// No es el defaul
 		alertaIncompleto();
 		return false;
-	} else {
-		for (i = 0; i < listaLetras(strNombre).length; i++) { 
-			for (j = 0; j < charNoAceptado.length; j++) {
-				if (listaLetras(strNombre)[i] == charNoAceptado[j]) {
-					alertaChistoso();
-					return false;
-				} else { 
-					console.log("Paso");
-				};
-			};
-		};
+	} else if (seudonimoNormal(listaLetras(strNombre)) == false) {
+			// Caracteres especiales en nombre
+			alertaChistoso();
+			return false;
 	};
 
 	// Control Apellido
 	if ((strApellido == "") || (strApellido == "Su apellido")) {
+		// No es el defaul
+		alertaIncompleto();
+		return false;
+	} else if (seudonimoNormal(listaLetras(strApellido)) == false) {
+		// Caracteres especiales en nombre
+		alertaChistoso();
 		return false;
 	};
 
-	// Control Mail
+	// Control Mail TODO:
 	if ((strMail == "") || (strMail == "Su mail")) {
+		// No es el defaul
+		alertaIncompleto();
 		return false;
 	};
 
@@ -67,7 +82,7 @@ function validate() {
 
 	//Control
 	var checkInputs = compruebaDatos(nombreInput, apellidoInput, mailInput);
-	
+
 	if (checkInputs == false) {
 		return false;
 	}
