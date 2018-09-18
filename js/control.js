@@ -7,6 +7,15 @@ function alertaIncompleto() {
 function alertaChistoso() {
 	return alert("Completa bien tus datos")
 };
+function alertaMailMalo() {
+	return alert("Ingrese un mail valido")
+};
+function alertaSinOpcion(){
+	return alert("Ingrese su tipo de consulta")
+};
+function alertaNoMsg(){
+	return alert("Deje su mensaje")
+};
 
 function seudonimoNormal(letrasPalabra) {
 	// Chars no aceptados (puden ser más)
@@ -26,9 +35,19 @@ function seudonimoNormal(letrasPalabra) {
 	return true;
 };
 
+function mailControl(letrasMail) {
+	// Devuelve true si hay un arroba
+	for (let letra of letrasMail) {
+		if (letra == "@") {
+			return true;
+		};
+	};
+	alertaMailMalo();
+	return false;
+};
 
 // Checkea el ingreso de datos correctamente
-function compruebaDatos(strNombre, strApellido, strMail) {
+function compruebaDatos(strNombre, strApellido, strMail, opcion, texto) {
 
 	// Separa los String a una lista de chars
 	var listaLetras = function(someStr) {return someStr.split("")};
@@ -39,9 +58,9 @@ function compruebaDatos(strNombre, strApellido, strMail) {
 		alertaIncompleto();
 		return false;
 	} else if (seudonimoNormal(listaLetras(strNombre)) == false) {
-			// Caracteres especiales en nombre
-			alertaChistoso();
-			return false;
+		// Caracteres especiales en nombre
+		alertaChistoso();
+		return false;
 	};
 
 	// Control Apellido
@@ -55,10 +74,28 @@ function compruebaDatos(strNombre, strApellido, strMail) {
 		return false;
 	};
 
-	// Control Mail TODO:
+	// Control Mail
 	if ((strMail == "") || (strMail == "Su mail")) {
 		// No es el defaul
 		alertaIncompleto();
+		return false;
+	} else if (mailControl(listaLetras(strMail)) == false) {
+		return false;
+	};
+
+	// Controla si tiene algun radio puesto
+	for (let radio of opcion) {
+		if (radio == true) {
+			break;
+		} else if (radio == opcion[opcion.length-1]) {
+			// Si el ultimo es false
+			alertaSinOpcion();
+			return false;
+		};
+	};
+
+	if ((texto == "") || (texto == "Ingrese...")) {
+		alertaNoMsg();
 		return false;
 	};
 
@@ -78,10 +115,15 @@ function validate() {
 	var 
 		nombreInput = document.getElementById("nombre").value,
 		apellidoInput = document.getElementById("apellido").value,
-		mailInput = document.getElementById("mail").value;
+		mailInput = document.getElementById("mail").value,
+		radiosInput = [document.getElementById("sugerencia").checked,
+					   document.getElementById("contacto").checked,
+					   document.getElementById("pregunta").checked],
+		textoInput = document.getElementById("mensage").value;
 
 	//Control
-	var checkInputs = compruebaDatos(nombreInput, apellidoInput, mailInput);
+	var checkInputs = compruebaDatos(nombreInput, apellidoInput, mailInput, 
+									radiosInput, textoInput);
 
 	if (checkInputs == false) {
 		return false;

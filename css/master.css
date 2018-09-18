@@ -83,6 +83,7 @@ body{
 }
 #section img{
 	margin: 0;
+	border: thin solid black;
 	width: 100%;
 	text-align: center;
 }

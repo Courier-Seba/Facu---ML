@@ -51,7 +51,7 @@
 				Si tenés alguna duda, te parece que habría que agregar algo o querés contactarte, completá 
 				los datos y dejá tu comentario.
 			</p>
-			<form onsubmit="validate()" target="_self">
+			<form onsubmit="validate()" target="_blank">
 				<label for="nombre">Nombre: </label>
 				<input type="text" ape="nom" id="nombre" value="Su nombre" onfocus="this.value = ''">
 				<label for="apellido">Apellido: </label>
@@ -61,15 +61,13 @@
 				<input type="mail" id="mail" value="Su mail" onfocus="this.value = ''"> 
 				<br><br>
 				<fieldset id="tipo">
-					<input type="radio" name="tipo">Pregunta
-					<input type="radio" name="tipo">Contacto
-					<input type="radio" name="tipo">Sugerencia
+					<input type="radio" name="tipo" id="pregunta">Pregunta
+					<input type="radio" name="tipo" id="contacto">Contacto
+					<input type="radio" name="tipo" id="sugerencia">Sugerencia
 				</fieldset>
 				<br><br>
 				<p>Mensage: </p>
-				<textarea name="msg" id="mensage" cols="30" rows="10">
-					Ingrese...
-				</textarea>
+				<textarea name="msg" id="mensage" cols="30" rows="10">Ingrese...</textarea>
 				<br><br>
 				<fieldset>
 					<input type="submit" value="Enviar">
