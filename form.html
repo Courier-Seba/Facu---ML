@@ -9,7 +9,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- JavaScript-->
-		<script src="js/control.js" languaje="javascript" type="text/javascript"></script>
 		<noscript>
 			El uso de javascript esta desabilitado en este navegador, para usar el formulario se necesita 
 			que permita el uso de javascript.
@@ -52,14 +51,14 @@
 				Si tenés alguna duda, te parece que habría que agregar algo o querés contactarte, completá 
 				los datos y dejá tu comentario.
 			</p>
-			<form onsubmit="validate()" target="_blank">
+			<form onsubmit="validate()" target="_self">
 				<label for="nombre">Nombre: </label>
 				<input type="text" ape="nom" id="nombre" value="Su nombre" onfocus="this.value = ''">
 				<label for="apellido">Apellido: </label>
 				<input type="text" name="ape" id="apellido" value="Su apellido" onfocus="this.value = ''">
 				<br><br>
 				<label for="mail">Su mail: </label>
-				<input type="mail" id="mail" value="Un mail de referencia" onfocus="this.value = ''"> 
+				<input type="mail" id="mail" value="Su mail" onfocus="this.value = ''"> 
 				<br><br>
 				<fieldset id="tipo">
 					<input type="radio" name="tipo">Pregunta
@@ -78,6 +77,7 @@
 				</fieldset>
 			</form>
 		</div>
+		<script src="js/control.js" languaje="javascript" type="text/javascript"></script>
 	</body>
 
 </html>
