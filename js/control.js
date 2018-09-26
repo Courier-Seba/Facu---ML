@@ -37,8 +37,15 @@ function seudonimoNormal(letrasPalabra) {
 
 function mailControl(letrasMail) {
 	// Devuelve true si hay un arroba
+	var ok1 = false,
+		ok2 = false;
 	for (let letra of letrasMail) {
-		if (letra == "@") {
+		if (letra == "@"){
+			ok1 = true;
+		} else if (letra == ".") {
+			ok2 = true;
+		} else if ((ok1 == true) && (ok2 == true)) {
+			// Contiene al menos un @ y un .
 			return true;
 		};
 	};
