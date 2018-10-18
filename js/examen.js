@@ -10,11 +10,11 @@ var resultados = [
 	"OBJETOS",
 	"TENSORFLOW",
 	"SEMANTICO",
-	["PYTHON", "R"],
 ];
 
 var ids = ["#1a", "#1b", "#1c", "#2a", "#2b", "#2c", "#3a", "#3b", "#3c", "#4a",
- 		   "#4b", "#4c", "#5a", "#5b"];
+ 		   "#4b", "#4c"];
+
 
 $(document).ready(function(){
 	$("#nota").hide();
@@ -26,11 +26,11 @@ $(document).ready(function(){
 	});
 
 	function control_resultados() {
-		let nota = 1;
+		let nota = 0;
 		let cantIds = ids.length;
-		let respuesta = "";
-		for (i=0; i<=cantIds; i++) {
-			respuesta = $(ids[i]).val().toUpperCase();
+		for (i=0; i<cantIds; i++) {
+			let respuesta = $(ids[i]).val();
+			respuesta = respuesta.toUpperCase;
 			if (respuesta == resultados[i]) {
 				nota += 0.5
 			};
